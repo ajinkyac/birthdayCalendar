@@ -11,54 +11,53 @@
       <header>
           <hgroup>
               <h1>Birthday Cal</h1>
-              <h2>&nbsp;</h2>
           </hgroup>
       </header>
       <section class="calendar-container">
         <section class="calendar-days">
-            <div class="fluid-box monday">
+            <div class="fluid-box Monday">
               <div class="fluid-box-header">
                 <span>Monday</span>
               </div>
               <div class="fluid-box-body">
               </div>
             </div>
-            <div class="fluid-box tuesday">
+            <div class="fluid-box Tuesday">
               <div class="fluid-box-header">
                 <span>Tuesday</span>
               </div>
               <div class="fluid-box-body">
               </div>
             </div>
-            <div class="fluid-box wednesday">
+            <div class="fluid-box Wednesday">
               <div class="fluid-box-header">
                 <span>Wednesday</span>
               </div>
               <div class="fluid-box-body">
               </div>
             </div>
-            <div class="fluid-box thursday">
+            <div class="fluid-box Thursday">
               <div class="fluid-box-header">
                 <span>Thursday</span>
               </div>
               <div class="fluid-box-body">
               </div>
             </div>
-            <div class="fluid-box friday">
+            <div class="fluid-box Friday">
               <div class="fluid-box-header">
                 <span>Friday</span>
               </div>
               <div class="fluid-box-body">
               </div>
             </div>
-            <div class="fluid-box saturday">
+            <div class="fluid-box Saturday">
               <div class="fluid-box-header">
                 <span>Saturday</span>
               </div>
               <div class="fluid-box-body">
               </div>
             </div>
-            <div class="fluid-box sunday">
+            <div class="fluid-box Sunday">
               <div class="fluid-box-header">
                 <span>Sunday</span>
               </div>
@@ -73,19 +72,23 @@
           <div class="calendar-data-op">
             <span>Year</span>
             <div>
-              <input type="number" name="birthYear"/>
+              <input type="number" name="birthYear" class="birthYear"/>
             </div>
             <div>
-              <button class="blue">Update</button>
+              <button class="updateBtn blue">Update</button>
             </div>
           </div>
         </section>
       </section>
-      <section id="fluid-body-template" style="display:none;">
-        <div class="fluid-box-body-tiles">
-          <span>ST<span>
-        </div>
-      </section>
       <footer>&nbsp;</footer>
   </body>
+  <script type="text/html" id="tiles-template">
+    <div class="fluid-box-body-tiles {{tileclass}}">
+      <span>{{initials}}<span>
+    </div>
+  </script>
+  <script type="text/javascript" src="scripts/calendar.js" async></script>
+  <script type="text/javascript" src="scripts/dataStore.js" async></script>
+  <script type="text/javascript" src="scripts/utils.js" async></script>
+  <script type="text/javascript" src="scripts/app.js" async></script>
 </html>

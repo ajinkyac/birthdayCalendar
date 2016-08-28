@@ -1,0 +1,32 @@
+/*
+ * Common styles
+ */
+
+* {
+    box-sizing: border-box;
+    font-family: $fontFamily;
+}
+
+BODY {
+  font-family: $fontFamily;
+  background-color: $appBgColor;
+  height: 100%;
+  margin: $zeroUnit;
+  padding: $zeroUnit;
+}
+
+HEADER {
+  text-align: center;
+  margin-top: $baseUnit;
+}
+
+FOOTER {
+  position: relative;
+  clear: both;
+  z-index: 1;
+  height: $baseUnit;
+}
+
+SECTION.calendar-container {
+  margin: $zeroUnit $baseUnit * 10 $zeroUnit $baseUnit * 10;
+}

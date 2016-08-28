@@ -1,3 +1,7 @@
+/*
+ * The utility object keeps all the application wide helper functions here.
+ */
+
 var BCAL = BCAL || {};
 
 (function(){
@@ -45,10 +49,10 @@ var BCAL = BCAL || {};
                callback(ajaxObj.responseText);
            }
            else if (ajaxObj.status == 400) {
-              console.error('There was an error 400');
+              console.error('ERROR: There was an error 400');
            }
            else {
-              console.info('something else other than 200 was returned');
+              console.info('INFO: Something else other than 200 was returned');
            }
         }
       };

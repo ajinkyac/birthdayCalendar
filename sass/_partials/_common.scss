@@ -1,5 +1,6 @@
 /*
  * Common styles
+ * Did not add reset as I wanted to keep things normalized
  */
 
 * {
@@ -7,7 +8,7 @@
     font-family: $fontFamily;
 }
 
-BODY {
+HTML, BODY {
   font-family: $fontFamily;
   background-color: $appBgColor;
   height: 100%;
@@ -32,36 +33,36 @@ SECTION.calendar-container {
 }
 
 .tile-color-1 {
-  background-color: #555d7b;
-  border-color: #555d7b !important;
+  background-color: $titleColor1;
+  border-color: $titleColor1 !important;
 }
 
 .tile-color-2 {
-  background-color: #9fd400;
-  border-color: #9fd400 !important;
+  background-color: $titleColor2;
+  border-color: $titleColor2 !important;
 }
 
 .tile-color-3 {
-  background-color: #c97d99;
-  border-color: #c97d99 !important;
+  background-color: $titleColor3;
+  border-color: $titleColor3 !important;
 }
 
 .tile-color-4 {
-  background-color: #79cae5;
-  border-color: #79cae5 !important;
+  background-color: $titleColor4;
+  border-color: $titleColor4 !important;
 }
 
 .tile-color-5 {
-  background-color: #e8492a;
-  border-color: #e8492a !important;
+  background-color: $titleColor5;
+  border-color: $titleColor5 !important;
 }
 
 .tile-color-6 {
-  background-color: #0055d0;
-  border-color: #0055d0 !important;
+  background-color: $titleColor6;
+  border-color: $titleColor6 !important;
 }
 
 .tile-color-7 {
-  background-color: #ff1baa;
-  border-color: #ff1baa !important;
+  background-color: $titleColor7;
+  border-color: $titleColor7 !important;
 }

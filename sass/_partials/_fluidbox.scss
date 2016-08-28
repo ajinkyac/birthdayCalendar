@@ -1,3 +1,7 @@
+/*
+ * Styling for fluid box and it's components - The title, tiles and body of the calendar day view boxes.
+ */
+
 SECTION.calendar-days {
     .fluid-box {
       width: $baseUnit + 10.2;
@@ -42,7 +46,7 @@ SECTION.calendar-days {
            font-size: $baseUnit * 5;
            margin: $zeroUnit $zeroUnit $zeroUnit $baseUnit * 3;
            float: left;
-         }         
+         }
       }
     }
 

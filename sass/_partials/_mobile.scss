@@ -18,6 +18,10 @@
     text-align: center;
   }
 
+  SECTION.calendar-operations {
+    background-color: $appBgColor;
+  }
+
   SECTION.calendar-days .fluid-box {
     margin: $baseUnit - 0.7;
   }
@@ -26,6 +30,7 @@
     float: $resetToNone;
     padding-right: $zeroUnit;
     margin-top: $baseUnit;
+    background-color: $appBgColor;
   }
 
   SECTION.calendar-operations DIV.calendar-live-data TEXTAREA {

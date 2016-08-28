@@ -161,13 +161,17 @@ SECTION.calendar-operations DIV.calendar-data-op {
     margin-right: 0;
     text-align: center; }
 
+  SECTION.calendar-operations {
+    background-color: #EAF0F2; }
+
   SECTION.calendar-days .fluid-box {
     margin: 0.3rem; }
 
   SECTION.calendar-operations DIV.calendar-live-data {
     float: none;
     padding-right: 0;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    background-color: #EAF0F2; }
 
   SECTION.calendar-operations DIV.calendar-live-data TEXTAREA {
     float: none;

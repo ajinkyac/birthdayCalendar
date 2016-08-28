@@ -1,5 +1,5 @@
 /*
- * 
+ * Application level SASS file, compiles to become app.css
  */
 /*
  * SASS variables
@@ -31,6 +31,34 @@ FOOTER {
 SECTION.calendar-container {
   margin: 0 10rem 0 10rem; }
 
+.tile-color-1 {
+  background-color: #555d7b;
+  border-color: #555d7b !important; }
+
+.tile-color-2 {
+  background-color: #9fd400;
+  border-color: #9fd400 !important; }
+
+.tile-color-3 {
+  background-color: #c97d99;
+  border-color: #c97d99 !important; }
+
+.tile-color-4 {
+  background-color: #79cae5;
+  border-color: #79cae5 !important; }
+
+.tile-color-5 {
+  background-color: #e8492a;
+  border-color: #e8492a !important; }
+
+.tile-color-6 {
+  background-color: #0055d0;
+  border-color: #0055d0 !important; }
+
+.tile-color-7 {
+  background-color: #ff1baa;
+  border-color: #ff1baa !important; }
+
 SECTION.calendar-days .fluid-box {
   width: 11.2rem;
   display: inline-block;
@@ -59,7 +87,12 @@ SECTION.calendar-days .fluid-box {
       height: 2rem;
       width: 2rem;
       border: 1px solid black;
-      padding: 0.35rem;
+      padding: 0.25rem;
+      float: left;
+      text-align: center; }
+    SECTION.calendar-days .fluid-box .fluid-box-body SPAN.no-birthday {
+      font-size: 5rem;
+      margin: 0 0 0 3rem;
       float: left; }
 SECTION.calendar-days .fluid-box:after {
   content: "";
@@ -80,8 +113,8 @@ SECTION.calendar-operations DIV.calendar-data-op {
   float: left;
   margin-top: 2.5rem;
   /*
-   * Note - Since there was only button hence keeping it here.
-   * If we had multiple buttons then we should keep a separate _button.scss partial.
+   * Since there was only button hence keeping it's styles here.
+   * If we had multiple buttons then would have kept it in separate _button.scss partial.
    */ }
   SECTION.calendar-operations DIV.calendar-data-op INPUT[type=number] {
     border: 1px solid #CCC;

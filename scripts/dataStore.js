@@ -1,24 +1,22 @@
+/*
+ * The data store object fetches the data, processes it and keeps it handy for app's use.
+ * We also do custom processing here which is a TODO item.
+ */
+
 var BCAL = BCAL || {};
 
 (function(){
 	BCAL.dataStore = {
     calendarData: '',
 
-    processedData: {
-      "Monday": [],
-      "Tuesday": [],
-      "Wednesday": [],
-      "Thursday": [],
-      "Friday": [],
-      "Saturday": [],
-      "Sunday": []
-    },
+    processedData: {},
 
     setupDataStore: function(response) {
       if (!response) {
         BCAL.utils.getDataFromServer(BCAL.dataServer.path, BCAL.dataStore.setupDataStore);
       }
       else {
+        BCAL.dataStore.reinitializeProcessDataObject();
         BCAL.dataStore.calendarData = JSON.parse(response);
         BCAL.dataStore.preProcessData();
         BCAL.utils.putJSONInTextArea(response);
@@ -30,6 +28,8 @@ var BCAL = BCAL || {};
           dataLength = data.length,
           i = 0;
 
+      this.reinitializeProcessDataObject();
+
       for (; i < dataLength; i++) {
         var birthday = data[i].birthday.split("/");
 
@@ -39,8 +39,8 @@ var BCAL = BCAL || {};
           data[i].birthday = birthday.join();
         }
 
-        var date = new Date(data[i].birthday);
-        var day = BCAL.utils.getDayOfTheWeek(date);
+        var date = new Date(data[i].birthday),
+            day = BCAL.utils.getDayOfTheWeek(date);
 
         BCAL.dataStore.processedData[day].push(data[i].name);
       }
@@ -65,8 +65,8 @@ var BCAL = BCAL || {};
         var birthYear = new Date(data[i].birthday).getFullYear();
 
         if (birthYear == year) {
-          var date = new Date(data[i].birthday);
-          var day = BCAL.utils.getDayOfTheWeek(date);
+          var date = new Date(data[i].birthday),
+              day = BCAL.utils.getDayOfTheWeek(date);
 
           BCAL.dataStore.processedData[day].push(data[i].name);
         }

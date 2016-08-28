@@ -33,9 +33,16 @@ SECTION.calendar-days {
             height: $baseUnit * 2;
             width: $baseUnit * 2;
             border: 1px $fluidBoxBorderStyle black;
-            padding: $baseUnit - 0.65;
+            padding: $baseUnit - 0.75;
             float: left;
+            text-align: center;
          }
+
+         SPAN.no-birthday {
+           font-size: $baseUnit * 5;
+           margin: $zeroUnit $zeroUnit $zeroUnit $baseUnit * 3;
+           float: left;
+         }         
       }
     }
 

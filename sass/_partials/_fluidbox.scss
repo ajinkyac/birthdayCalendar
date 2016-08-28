@@ -1,0 +1,46 @@
+SECTION.calendar-days {
+    .fluid-box {
+      width: $baseUnit + 10.2;
+      display: inline-block;
+      min-height: $baseUnit + 10.2;
+      border: 1px $fluidBoxBorderStyle;
+      border-top-right-radius: $baseUnit - 0.3;
+      border-top-left-radius: $baseUnit - 0.3;
+      border-top-color: $fluidBoxTopBorderColor;
+      border-left-color: $fluidBoxGenBorderColor;
+      border-right-color: $fluidBoxGenBorderColor;
+      border-bottom-color: $fluidBoxGenBorderColor;
+      margin: $baseUnit - 0.7;
+
+      .fluid-box-header {
+        padding: $baseUnit - 0.7;
+        background-color: $fluidBoxTopBorderColor;
+        text-align: right;
+        border-bottom: 1px $fluidBoxBorderStyle $fluidBoxTopBorderColor;
+        border-top-right-radius: $baseUnit - 0.6;
+        border-top-left-radius: $baseUnit - 0.6;
+        color: $fluidBoxHeaderColor;
+
+        SPAN {
+          font-size: $baseUnit - 0.15;
+        }
+      }
+
+      .fluid-box-body {
+        padding: $baseUnit - 0.5;
+
+         .fluid-box-body-tiles {
+            height: $baseUnit * 2;
+            width: $baseUnit * 2;
+            border: 1px $fluidBoxBorderStyle black;
+            padding: $baseUnit - 0.65;
+            float: left;
+         }
+      }
+    }
+
+    .fluid-box:after {
+      content: "";
+      display: block;
+    }
+}

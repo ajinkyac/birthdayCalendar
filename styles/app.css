@@ -6,12 +6,13 @@
  */
 /*
  * Common styles
+ * Did not add reset as I wanted to keep things normalized
  */
 * {
   box-sizing: border-box;
   font-family: "Lato", serif; }
 
-BODY {
+HTML, BODY {
   font-family: "Lato", serif;
   background-color: #EAF0F2;
   height: 100%;
@@ -32,33 +33,36 @@ SECTION.calendar-container {
   margin: 0 10rem 0 10rem; }
 
 .tile-color-1 {
-  background-color: #555d7b;
-  border-color: #555d7b !important; }
+  background-color: #555D7B;
+  border-color: #555D7B !important; }
 
 .tile-color-2 {
-  background-color: #9fd400;
-  border-color: #9fd400 !important; }
+  background-color: #9FD400;
+  border-color: #9FD400 !important; }
 
 .tile-color-3 {
-  background-color: #c97d99;
-  border-color: #c97d99 !important; }
+  background-color: #C97D99;
+  border-color: #C97D99 !important; }
 
 .tile-color-4 {
-  background-color: #79cae5;
-  border-color: #79cae5 !important; }
+  background-color: #79CAE5;
+  border-color: #79CAE5 !important; }
 
 .tile-color-5 {
-  background-color: #e8492a;
-  border-color: #e8492a !important; }
+  background-color: #E8492A;
+  border-color: #E8492A !important; }
 
 .tile-color-6 {
-  background-color: #0055d0;
-  border-color: #0055d0 !important; }
+  background-color: #0055D0;
+  border-color: #0055D0 !important; }
 
 .tile-color-7 {
-  background-color: #ff1baa;
-  border-color: #ff1baa !important; }
+  background-color: #FF1BAA;
+  border-color: #FF1BAA !important; }
 
+/*
+ * Styling for fluid box and it's components - The title, tiles and body of the calendar day view boxes.
+ */
 SECTION.calendar-days .fluid-box {
   width: 11.2rem;
   display: inline-block;
@@ -98,20 +102,21 @@ SECTION.calendar-days .fluid-box:after {
   content: "";
   display: block; }
 
+/*
+ * Styling for calendar operations' section - The textarea, inputbox and button
+ */
 SECTION.calendar-operations DIV.calendar-live-data {
   float: left;
-  padding-right: 3rem;
-  margin-top: 2.5rem; }
+  padding-right: 3rem; }
   SECTION.calendar-operations DIV.calendar-live-data TEXTAREA {
-    float: left;
     width: 35rem;
     min-height: 20rem;
     max-width: 69rem;
     outline: none;
     border: 1px solid #F0F0F0; }
 SECTION.calendar-operations DIV.calendar-data-op {
-  float: left;
   margin-top: 2.5rem;
+  margin-bottom: 13rem;
   /*
    * Since there was only button hence keeping it's styles here.
    * If we had multiple buttons then would have kept it in separate _button.scss partial.
@@ -140,6 +145,9 @@ SECTION.calendar-operations DIV.calendar-data-op {
   SECTION.calendar-operations DIV.calendar-data-op BUTTON.blue {
     background-color: #0186EF; }
 
+/*
+ * Mobile specific fit & finish overrides supporting Nexus 5 & 6, iPhone 6 and 6 plus.
+ */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   H1 {
     font-size: 2rem;

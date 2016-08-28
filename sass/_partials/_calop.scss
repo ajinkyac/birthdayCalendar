@@ -1,11 +1,13 @@
+/*
+ * Styling for calendar operations' section - The textarea, inputbox and button
+ */
+
 SECTION.calendar-operations {
   DIV.calendar-live-data {
     float: left;
     padding-right: $baseUnit * 3;
-    margin-top: $baseUnit + 1.5;
 
     TEXTAREA {
-      float:left;
       width: $baseUnit * 35;
       min-height: $baseUnit * 20;
       max-width: $baseUnit * 69;
@@ -15,8 +17,8 @@ SECTION.calendar-operations {
   }
 
   DIV.calendar-data-op {
-    float: left;
     margin-top: $baseUnit + 1.5;
+    margin-bottom: $baseUnit * 13;
 
     INPUT[type=number] {
       border: 1px $fluidBoxBorderStyle $inputBorderColor;

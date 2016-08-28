@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Birthday calendar</title>
+      <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato"/>
+      <link href="styles/app.css" rel="stylesheet" />
+  </head>
+  <body>
+      <header>
+          <hgroup>
+              <h1>Birthday Cal</h1>
+              <h2>&nbsp;</h2>
+          </hgroup>
+      </header>
+      <section class="calendar-container">
+        <section class="calendar-days">
+            <div class="fluid-box monday">
+              <div class="fluid-box-header">
+                <span>Monday</span>
+              </div>
+              <div class="fluid-box-body">
+              </div>
+            </div>
+            <div class="fluid-box tuesday">
+              <div class="fluid-box-header">
+                <span>Tuesday</span>
+              </div>
+              <div class="fluid-box-body">
+              </div>
+            </div>
+            <div class="fluid-box wednesday">
+              <div class="fluid-box-header">
+                <span>Wednesday</span>
+              </div>
+              <div class="fluid-box-body">
+              </div>
+            </div>
+            <div class="fluid-box thursday">
+              <div class="fluid-box-header">
+                <span>Thursday</span>
+              </div>
+              <div class="fluid-box-body">
+              </div>
+            </div>
+            <div class="fluid-box friday">
+              <div class="fluid-box-header">
+                <span>Friday</span>
+              </div>
+              <div class="fluid-box-body">
+              </div>
+            </div>
+            <div class="fluid-box saturday">
+              <div class="fluid-box-header">
+                <span>Saturday</span>
+              </div>
+              <div class="fluid-box-body">
+              </div>
+            </div>
+            <div class="fluid-box sunday">
+              <div class="fluid-box-header">
+                <span>Sunday</span>
+              </div>
+              <div class="fluid-box-body">
+              </div>
+            </div>
+        </section>
+        <section class="calendar-operations">
+          <div class="calendar-live-data">
+            <textarea></textarea>
+          </div>
+          <div class="calendar-data-op">
+            <span>Year</span>
+            <div>
+              <input type="number" name="birthYear"/>
+            </div>
+            <div>
+              <button class="blue">Update</button>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section id="fluid-body-template" style="display:none;">
+        <div class="fluid-box-body-tiles">
+          <span>ST<span>
+        </div>
+      </section>
+      <footer>&nbsp;</footer>
+  </body>
+</html>

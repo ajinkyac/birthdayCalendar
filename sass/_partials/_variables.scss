@@ -1,0 +1,23 @@
+/*
+ * SASS variables
+ */
+
+// Common
+$fontFamily: 'Lato', serif;
+$appBgColor: #EAF0F2;
+$baseUnit: 1rem;
+$zeroUnit: 0;
+$resetToNone: none;
+
+// Calendar day box a.k.a _fluidbox.scss
+$fluidBoxBorderStyle: solid;
+$fluidBoxColor: #AB9EEE;
+$fluidBoxTopBorderColor: $fluidBoxColor;
+$fluidBoxGenBorderColor: #D3D3D3;
+$fluidBoxHeaderColor: $fluidBoxGenBorderColor;
+
+// Operations section a.k.a _calop.scss
+$textAreaBorderColor: #F0F0F0;
+$buttonTextColor: #FFF;
+$buttonBgColor: #0186EF;
+$inputBorderColor: #CCC;

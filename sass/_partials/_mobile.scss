@@ -1,0 +1,41 @@
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  H1 {
+    font-size: $baseUnit * 2;
+    font-weight: normal;
+  }
+
+  H2 {
+    font-size: $baseUnit;
+  }
+
+  SECTION.calendar-container {
+    margin-left: $zeroUnit;
+    margin-right: $zeroUnit;
+    text-align: center;
+  }
+
+  SECTION.calendar-days .fluid-box {
+    margin: $baseUnit - 0.7;
+  }
+
+  SECTION.calendar-operations DIV.calendar-live-data {
+    float: $resetToNone;
+    padding-right: $zeroUnit;
+    margin-top: $baseUnit;
+  }
+
+  SECTION.calendar-operations DIV.calendar-live-data TEXTAREA {
+    float: $resetToNone;
+    width: $baseUnit * 21;
+    resize: $resetToNone;
+  }
+
+  SECTION.calendar-operations DIV.calendar-data-op {
+    float: $resetToNone;
+    margin-top: $baseUnit;
+  }
+
+  SECTION.calendar-days .fluid-box {
+    width: $baseUnit * 10;
+  }
+}

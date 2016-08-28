@@ -1,0 +1,54 @@
+SECTION.calendar-operations {
+  DIV.calendar-live-data {
+    float: left;
+    padding-right: $baseUnit * 3;
+    margin-top: $baseUnit + 1.5;
+
+    TEXTAREA {
+      float:left;
+      width: $baseUnit * 35;
+      min-height: $baseUnit * 20;
+      max-width: $baseUnit * 69;
+      outline: $resetToNone;
+      border: 1px $fluidBoxBorderStyle $textAreaBorderColor;
+    }
+  }
+
+  DIV.calendar-data-op {
+    float: left;
+    margin-top: $baseUnit + 1.5;
+
+    INPUT[type=number] {
+      border: 1px $fluidBoxBorderStyle $inputBorderColor;
+      -moz-border-radius: $baseUnit - 0.7;
+      -webkit-border-radius: $baseUnit - 0.7;
+      border-radius: $baseUnit - 0.7;
+      font-size: $baseUnit;
+      outline: $zeroUnit;
+      -webkit-appearance: $resetToNone;
+      height: $baseUnit + 1.3;
+      width: $baseUnit * 11;
+      margin-top: $baseUnit - 0.5;
+    }
+
+    /*
+     * Since there was only button hence keeping it's styles here.
+     * If we had multiple buttons then would have kept it in separate _button.scss partial.
+     */
+    BUTTON {
+      border: $resetToNone;
+      color: $buttonTextColor;
+      padding: $baseUnit - 0.0625 $baseUnit * 2;
+      text-align: center;
+      text-decoration: $resetToNone;
+      display: inline-block;
+      font-size: $baseUnit;
+      margin: $baseUnit * 2 $zeroUnit;
+      cursor: pointer;
+    }
+
+    BUTTON.blue {
+      background-color: $buttonBgColor;
+    }
+  }
+}

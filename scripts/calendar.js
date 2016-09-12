@@ -66,7 +66,7 @@ BCAL.calendar = (function () {
       var yearInputBox = document.getElementsByClassName("birthYear")[0];
 
       BCAL.utils.removeListener(yearInputBox, 'keypress', function(event) {
-        if (event.which == 13 || event.keyCode == 13) {          
+        if (event.which == 13 || event.keyCode == 13) {
           destroyAndRebuild();
           return false;
         }
@@ -106,14 +106,18 @@ BCAL.calendar = (function () {
             html = "",
             i = 0;
 
-        for (; i < numOfBirthdays ; i++) {
+        for (; i < numOfBirthdays; i++) {
           var name = birthdayData[day][i].split(" "),
               firstName = name[0],
               lastName = name[1],
               initials = firstName.substring(0,1) + lastName.substring(0,1);
 
           html += birthdayTilesTemplate.replace(/{{initials}}/g, initials);
+          html = html.replace(/{{fullname}}/g, birthdayData[day][i]);
           html = html.replace(/{{tileclass}}/g, BCAL.utils.getRandomTileClass());
+          if (numOfBirthdays === 1) {
+              html = html.replace(/{{styles}}/g, "width: 100%; height: 100%;");
+          }
         }
 
         if (numOfBirthdays !== 0) {
@@ -139,7 +143,7 @@ BCAL.calendar = (function () {
       if (inputtedYear.length > 0) {
         detachEvents();
 
-        BCAL.dataStore.processDataByYear(inputtedYear);
+        BCAL.dataStore.processData(inputtedYear);
 
         renderBirthdays();
       }

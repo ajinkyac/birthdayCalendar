@@ -4,7 +4,7 @@
 
 SECTION.calendar-days {
     .fluid-box {
-      width: $baseUnit + 10.2;
+      width: 182px;
       display: inline-block;
       min-height: $baseUnit + 10.2;
       border: 1px $fluidBoxBorderStyle;
@@ -30,16 +30,37 @@ SECTION.calendar-days {
         }
       }
 
-      .fluid-box-body {
-        padding: $baseUnit - 0.5;
+      .fluid-box-body {        
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+        -webkit-justify-content: center;
+        justify-content: flex-start;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-align-content: stretch;
+        align-content: stretch;
+        height: 178px;
+        float: left;
+        width: 100%;
 
          .fluid-box-body-tiles {
-            height: $baseUnit * 2;
-            width: $baseUnit * 2;
+            height: 60px;
+            width: 60px;
             border: 1px $fluidBoxBorderStyle black;
             padding: $baseUnit - 0.75;
-            float: left;
+            display: table;
             text-align: center;
+
+            SPAN {
+              display: table-cell;
+              vertical-align: middle;
+            }
          }
 
          SPAN.no-birthday {

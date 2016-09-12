@@ -78,7 +78,20 @@ var BCAL = BCAL || {};
       var minimum = 0;
 
       return tileClasses[Math.floor(Math.random() * (maximum - minimum + 1)) + minimum];
-    }
+    },
+
+		getDateForYear: function(dateString, forYear) {			
+		    var rawDate = dateString.split("/");
+				if (rawDate[0].length === 2 && rawDate[0] > 12) {
+					rawDate.swap(0, 1);
+				}
+
+				if (rawDate[2].length === 4) {
+					rawDate[2] = forYear;
+				}
+
+		    return new Date(rawDate.join('/'));
+		}
 	};
 
   var utils = BCAL.utils;
